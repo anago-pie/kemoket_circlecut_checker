@@ -16,7 +16,7 @@ const version=document.getElementById('version');
 const test=document.getElementById('test');
 const when=document.getElementById('when');
 const modeDisplay = document.getElementById('mode-display');
-when.innerText+=" ver.0.2.0\n";
+when.innerText+=" ver.0.3.0\n";
 const modeButtons=document.querySelectorAll('.mode-button'); //各開催回選択ボタンを格納する
 let mode = '';
 let modeName='';
@@ -243,7 +243,7 @@ document.getElementById('imageInput').addEventListener('change', async event=>{
         }
       })
       if(genreChecked.length==0){
-        errorMessage.innerText+=`[ERROR]"配置希望ジャンル欄のチェックがありません\n"`
+        errorMessage.innerText+=`[ERROR]"配置希望ジャンル"欄のチェックがありません\n`
         genre.innerText=`配置希望ジャンル: empty\n`;
         genre.style.color="red";
         errored=true;
