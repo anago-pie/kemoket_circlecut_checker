@@ -16,7 +16,7 @@ const version=document.getElementById('version');
 const test=document.getElementById('test');
 const when=document.getElementById('when');
 const modeDisplay = document.getElementById('mode-display');
-when.innerText+=" ver.0.4.0\n";
+when.innerText+=" ver.0.5.0\n";
 const modeButtons=document.querySelectorAll('.mode-button'); //各開催回選択ボタンを格納する
 let mode = '';
 let modeName='';
@@ -291,6 +291,9 @@ document.getElementById('imageInput').addEventListener('change', async event=>{
       }
       else if(vers.includes("kk")){
         vers = vers.replace("kk", "けもケット");
+      }
+      else if(vers.includes("結")){
+        vers = vers.replace("結", "新春けもケット結")
       }
       else{
         vers="Unknown";
@@ -965,7 +968,7 @@ function clearPixelCheck(pixels){
 async function versionCheck(ctx){
   const [hmin,hmax,wmin, wmax]=[1293, 1350, 3027, 3240];
   const [h, w]=[hmax-hmin+1, wmax-wmin+1];
-  const worker= await Tesseract.createWorker(['eng']);
+  const worker= await Tesseract.createWorker(['eng','jpn']);
   const result = await worker.recognize(ctx.canvas, {rectangle:{
     top: hmin,
     left: wmin,
