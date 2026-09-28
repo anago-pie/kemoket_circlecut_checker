@@ -1,4 +1,4 @@
-const [correctWidth,correctHeight]=[3260,1370];
+const [correctWidth,correctHeight]=[3260,1370];;
 
 const errorMessage=document.getElementById('error');
 const canvas = document.getElementById('canvas');
